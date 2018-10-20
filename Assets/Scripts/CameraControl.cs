@@ -7,17 +7,16 @@ public class CameraControl : MonoBehaviour {
     public float speed;
 
     public Transform player;
-    public Transform camera;
+    public Transform PlayerViewer;
 
     private Vector3 camOffsetFromPlayer;
 
     void Start()
     {
-        camOffsetFromPlayer = player.position - camera.position;
+        camOffsetFromPlayer = player.position - PlayerViewer.position;
     }
-
     void Update()
     {
-        camera.position = Vector3.Lerp(camera.position, player.position - camOffsetFromPlayer, speed);
+        PlayerViewer.position = Vector3.Lerp(PlayerViewer.position, player.position - camOffsetFromPlayer, speed);
     }
 }
