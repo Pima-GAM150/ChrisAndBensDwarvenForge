@@ -459,7 +459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -306.4, y: 35.5}
+  m_AnchoredPosition: {x: -307, y: -38.479}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293073327
@@ -1792,6 +1792,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1709665535}
   m_CullTransparentMesh: 0
+--- !u!1001 &1732559823
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.018483872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.8931755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.421875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928546498185320, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
+        type: 2}
+      propertyPath: InventoryPanel
+      value: 
+      objectReference: {fileID: 1340700427}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1867560607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,8 +2077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -278.3, y: 114.600006}
-  m_SizeDelta: {x: -556.7, y: -229.3}
+  m_AnchoredPosition: {x: -298.62, y: 36.86}
+  m_SizeDelta: {x: -597.35, y: -73.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1969991051
 GameObject:

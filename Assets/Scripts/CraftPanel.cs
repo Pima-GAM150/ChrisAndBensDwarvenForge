@@ -9,8 +9,8 @@ public class CraftPanel : MonoBehaviour {
 
     public TMP_InputField nameLabel;
     public TMP_InputField descLabel;
-
     public Weapon weaponPrefab;
+    
 
     public void Craft()
     {
