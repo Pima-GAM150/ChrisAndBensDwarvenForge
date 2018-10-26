@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour {
         return json;
     }
 
-    void Load( string json )
+    public void Load( string json )
     {
         SerializableWeapon weaponData = JsonUtility.FromJson<SerializableWeapon>(json);
         this.level = weaponData.level;
