@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1298388357358120}
+  m_RootGameObject: {fileID: 1173433425572136}
   m_IsPrefabAsset: 1
---- !u!1 &1298388357358120
+--- !u!1 &1173433425572136
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4928546498185320}
-  - component: {fileID: 114089853518319178}
+  - component: {fileID: 4631763146168980}
+  - component: {fileID: 114418336923916592}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4928546498185320
+--- !u!4 &4631763146168980
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298388357358120}
+  m_GameObject: {fileID: 1173433425572136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018483872, y: 0.8931755, z: -0.421875}
+  m_LocalPosition: {x: -2.5586987, y: 3.3432434, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114089853518319178
+--- !u!114 &114418336923916592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298388357358120}
+  m_GameObject: {fileID: 1173433425572136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2d2bac32b4fc54a872aae27f4bd594, type: 3}
+  m_Script: {fileID: 11500000, guid: 942b129e4139a204c8919a83bb8e1ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crafting: 0
-  InventoryPanel: {fileID: 0}
+  level: 0
+  description: 
