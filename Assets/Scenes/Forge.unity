@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 303653089}
   m_Layer: 0
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: Anvil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,7 +1152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.8, y: -26.599998}
+  m_AnchoredPosition: {x: 92.80005, y: -26.599976}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834594646
@@ -1487,6 +1487,12 @@ MonoBehaviour:
   m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1513244521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
+    type: 2}
+  m_PrefabInternal: {fileID: 1732559823}
+  m_Script: {fileID: 11500000, guid: 7d2d2bac32b4fc54a872aae27f4bd594, type: 3}
 --- !u!1 &1594400808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +1998,7 @@ MonoBehaviour:
   Mycollidor: {fileID: 1867560609}
   RigidBodyChar: {fileID: 1867560612}
   speed: 3
+  ThisManager: {fileID: 1513244521}
 --- !u!1 &1937113808
 GameObject:
   m_ObjectHideFlags: 0

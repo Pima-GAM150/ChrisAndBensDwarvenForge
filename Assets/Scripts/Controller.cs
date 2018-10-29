@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour {
     private float buttonY;
     private float Yrotate = 0f;
     private float Xrotate = 0f;
+    public Manager ThisManager;
    // public Animator animator;
 
     // Update is called once per frame
@@ -37,5 +38,20 @@ public class Controller : MonoBehaviour {
         RigidBodyChar.velocity = new Vector3(buttonX * speed, RigidBodyChar.velocity.y, 0f);
         RigidBodyChar.velocity = new Vector3(RigidBodyChar.velocity.x, buttonY * speed, 0f);
     }
+
+
+    void OnCollisionEnter2D(Collision2D Interact){
+        if (Interact.gameObject.tag == "Anvil"){
+            ThisManager.Crafting = true;
+        }
+        
+
+
+
+    }
+    void OnCollisionExit2D(Collision2D Interact){
+        ThisManager.Crafting = false;
+    }
  
 }
+
