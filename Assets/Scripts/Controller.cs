@@ -41,16 +41,53 @@ public class Controller : MonoBehaviour {
 
 
     void OnCollisionEnter2D(Collision2D Interact){
-        if (Interact.gameObject.tag == "Anvil"){
-            ThisManager.Crafting = true;
+        if (Interact.gameObject.tag == "Wood" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MWood = true;
         }
-        
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "Metal" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MMetal = true;
+        }
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "Mithral" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MMithral = true;
+        }
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "HiltTable"){
+            if(ThisManager.MWood == true){
+                HiltMaker();
+            }
+        }
+        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+
+        }
+        if (Interact.gameObject.tag == "WeaponTable"){
+            if(ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+                BladeMaker();
+            }
+        }
+        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+
+        }
 
 
 
     }
     void OnCollisionExit2D(Collision2D Interact){
-        ThisManager.Crafting = false;
+        
+    }
+
+    public void HiltMaker(){
+        ThisManager.Hilt = true;
+    }
+    public void BladeMaker(){
+        ThisManager.Blade = true;
     }
  
 }

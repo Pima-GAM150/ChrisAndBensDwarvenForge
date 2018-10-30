@@ -5,10 +5,14 @@ using UnityEngine;
 public class Manager : MonoBehaviour {
 
 	public bool Crafting;
-	public bool Material;
+	public bool MWood;
+	public bool MMetal;
+	public bool MMithral;
 	public bool Hilt;
 	public bool Blade;
     public GameObject InventoryPanel;
+    public GameObject HiltPanel;
+    public GameObject WeaponPanel;
 
     public void Update(){
         if(Crafting == true){
@@ -16,6 +20,18 @@ public class Manager : MonoBehaviour {
         }
         else{
             InventoryPanel.SetActive(false);
+        }
+        if(Hilt == true){
+        	HiltPanel.SetActive(true);
+        }
+        else{
+        	HiltPanel.SetActive(false);
+        }
+        if( Blade == true){
+        	WeaponPanel.SetActive(true);
+        }
+        else{
+        	WeaponPanel.SetActive(false);
         }
     }
 }
