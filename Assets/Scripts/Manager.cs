@@ -10,6 +10,18 @@ public class Manager : MonoBehaviour {
 	public bool MMithral;
 	public bool Hilt;
 	public bool Blade;
+	public bool WoodBladeHead;
+	public bool MetalBladeHead;
+	public bool MithralBladeHead;
+	public bool WoodAxeHead;
+	public bool MetalAxeHead;
+	public bool MithralAxeHead;
+	public bool WoodHammerHead;
+	public bool MetalHammerHead;
+	public bool MithralHammerHead;
+	public bool WoodHilt;
+	public bool Headslot;
+	public bool Hiltslot;
     public GameObject InventoryPanel;
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
@@ -21,13 +33,13 @@ public class Manager : MonoBehaviour {
         else{
             InventoryPanel.SetActive(false);
         }
-        if(Hilt == true){
+        if(Hilt == true && Hiltslot == false){
         	HiltPanel.SetActive(true);
         }
         else{
         	HiltPanel.SetActive(false);
         }
-        if( Blade == true){
+        if( Blade == true && Headslot == false){
         	WeaponPanel.SetActive(true);
         }
         else{

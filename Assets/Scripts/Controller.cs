@@ -80,7 +80,9 @@ public class Controller : MonoBehaviour {
 
     }
     void OnCollisionExit2D(Collision2D Interact){
-        
+        ThisManager.Hilt = false;
+        ThisManager.Blade = false;
+        ThisManager.Crafting = false;
     }
 
     public void HiltMaker(){
