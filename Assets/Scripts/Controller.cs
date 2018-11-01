@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour {
     private float buttonY;
     private float Yrotate = 0f;
     private float Xrotate = 0f;
+    public Manager ThisManager;
    // public Animator animator;
 
     // Update is called once per frame
@@ -37,5 +38,59 @@ public class Controller : MonoBehaviour {
         RigidBodyChar.velocity = new Vector3(buttonX * speed, RigidBodyChar.velocity.y, 0f);
         RigidBodyChar.velocity = new Vector3(RigidBodyChar.velocity.x, buttonY * speed, 0f);
     }
+
+
+    void OnCollisionEnter2D(Collision2D Interact){
+        if (Interact.gameObject.tag == "Wood" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MWood = true;
+        }
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "Metal" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MMetal = true;
+        }
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "Mithral" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+            ThisManager.MMithral = true;
+        }
+        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+
+        }
+        if (Interact.gameObject.tag == "HiltTable"){
+            if(ThisManager.MWood == true){
+                HiltMaker();
+            }
+        }
+        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+
+        }
+        if (Interact.gameObject.tag == "WeaponTable"){
+            if(ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+                BladeMaker();
+            }
+        }
+        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+
+        }
+
+
+
+    }
+    void OnCollisionExit2D(Collision2D Interact){
+        ThisManager.Hilt = false;
+        ThisManager.Blade = false;
+        ThisManager.Crafting = false;
+    }
+
+    public void HiltMaker(){
+        ThisManager.Hilt = true;
+    }
+    public void BladeMaker(){
+        ThisManager.Blade = true;
+    }
  
 }
+
