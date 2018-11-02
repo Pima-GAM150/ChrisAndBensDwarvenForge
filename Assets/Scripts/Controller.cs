@@ -75,6 +75,13 @@ public class Controller : MonoBehaviour {
         else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
 
         }
+        if(Interact.gameObject.tag == "Anvil")
+        {
+            if(ThisManager.Headslot && ThisManager.Hiltslot == true)
+            {
+                ThisManager.Crafting = true;
+            }
+        }
 
 
 

@@ -5,11 +5,14 @@ using UnityEngine;
 public class Manager : MonoBehaviour {
 
 	public bool Crafting;
+    
 	public bool MWood;
 	public bool MMetal;
 	public bool MMithral;
+
 	public bool Hilt;
 	public bool Blade;
+
 	public bool WoodBladeHead;
 	public bool MetalBladeHead;
 	public bool MithralBladeHead;
@@ -19,9 +22,12 @@ public class Manager : MonoBehaviour {
 	public bool WoodHammerHead;
 	public bool MetalHammerHead;
 	public bool MithralHammerHead;
+
 	public bool WoodHilt;
+
 	public bool Headslot;
 	public bool Hiltslot;
+
     public GameObject InventoryPanel;
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
@@ -45,5 +51,20 @@ public class Manager : MonoBehaviour {
         else{
         	WeaponPanel.SetActive(false);
         }
+    }
+
+    public void Clearallbools()
+    {
+        Headslot = false;
+        Hiltslot = false;
+        WoodBladeHead = false;
+        MetalBladeHead = false;
+        MithralBladeHead = false;
+        WoodAxeHead = false;
+        MetalAxeHead = false;
+        MithralAxeHead = false;
+        WoodHammerHead = false;
+        MetalHammerHead = false;
+        MithralHammerHead = false;
     }
 }
