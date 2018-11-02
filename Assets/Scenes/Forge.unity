@@ -840,7 +840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92.799995, y: -99.91}
+  m_AnchoredPosition: {x: 92.79999, y: -99.91}
   m_SizeDelta: {x: 160, y: 103.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297230680
@@ -1969,7 +1969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &887127054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3666,6 +3666,7 @@ MonoBehaviour:
   descLabel: {fileID: 297230680}
   weaponPrefab: {fileID: 114418336923916592, guid: 35bac362f86bec447964b777cfa314ba,
     type: 2}
+  ThisManager: {fileID: 1513244521}
 --- !u!114 &1937113810
 MonoBehaviour:
   m_ObjectHideFlags: 0
