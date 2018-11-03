@@ -5,6 +5,7 @@ using UnityEngine;
 public class Manager : MonoBehaviour {
 
 	public bool Crafting;
+	public bool QuitMenu;
     
 	public bool MWood;
 	public bool MMetal;
@@ -31,6 +32,7 @@ public class Manager : MonoBehaviour {
     public GameObject InventoryPanel;
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
+    public GameObject QuitSaveLoad;
 
     public void Update(){
         if(Crafting == true){
@@ -50,6 +52,12 @@ public class Manager : MonoBehaviour {
         }
         else{
         	WeaponPanel.SetActive(false);
+        }
+        if(QuitMenu == true){
+        	QuitSaveLoad.SetActive(true);
+        }
+        else{
+        	QuitSaveLoad.SetActive(false);
         }
     }
 

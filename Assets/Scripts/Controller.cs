@@ -13,6 +13,7 @@ public class Controller : MonoBehaviour {
     private float Yrotate = 0f;
     private float Xrotate = 0f;
     public Manager ThisManager;
+    public WeaponInventory ThisInventory;
    // public Animator animator;
 
     // Update is called once per frame
@@ -31,7 +32,10 @@ public class Controller : MonoBehaviour {
         if (buttonX > 0f){
            Yrotate = 0f;
         }
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            OpenMenu();
     }
+}
 
     void FixedUpdate(){
 		//speed of the character
@@ -82,6 +86,7 @@ public class Controller : MonoBehaviour {
                 ThisManager.Crafting = true;
             }
         }
+        
 
 
 
@@ -97,6 +102,14 @@ public class Controller : MonoBehaviour {
     }
     public void BladeMaker(){
         ThisManager.Blade = true;
+    }
+    public void OpenMenu(){
+        StartCoroutine(MenuDelay());
+        }
+    IEnumerator MenuDelay(){
+        yield return new WaitForSeconds(.1f);
+        ThisManager.QuitMenu = !ThisManager.QuitMenu;
+        
     }
  
 }

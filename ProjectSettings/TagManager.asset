@@ -10,6 +10,8 @@ TagManager:
   - Mithral
   - HiltTable
   - WeaponTable
+  - Save
+  - Load
   layers:
   - Default
   - TransparentFX
