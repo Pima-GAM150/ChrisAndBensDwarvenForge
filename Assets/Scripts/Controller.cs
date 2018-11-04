@@ -86,6 +86,9 @@ public class Controller : MonoBehaviour {
                 ThisManager.Crafting = true;
             }
         }
+        if(Interact.gameObject.tag == "Trash"){
+            ThisManager.Clearallbools();
+        }
         
 
 

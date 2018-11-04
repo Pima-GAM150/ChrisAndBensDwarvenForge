@@ -12,6 +12,7 @@ TagManager:
   - WeaponTable
   - Save
   - Load
+  - Trash
   layers:
   - Default
   - TransparentFX

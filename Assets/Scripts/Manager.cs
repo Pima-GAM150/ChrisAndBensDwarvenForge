@@ -74,5 +74,8 @@ public class Manager : MonoBehaviour {
         WoodHammerHead = false;
         MetalHammerHead = false;
         MithralHammerHead = false;
+        MWood = false;
+        MMetal = false;
+        MMithral = false;
     }
 }
