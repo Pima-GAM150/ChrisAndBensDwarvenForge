@@ -52,4 +52,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crafting: 0
+  QuitMenu: 0
+  MWood: 0
+  MMetal: 0
+  MMithral: 0
+  Hilt: 0
+  Blade: 0
+  WoodBladeHead: 0
+  MetalBladeHead: 0
+  MithralBladeHead: 0
+  WoodAxeHead: 0
+  MetalAxeHead: 0
+  MithralAxeHead: 0
+  WoodHammerHead: 0
+  MetalHammerHead: 0
+  MithralHammerHead: 0
+  WoodHilt: 0
+  Headslot: 0
+  Hiltslot: 0
   InventoryPanel: {fileID: 0}
+  HiltPanel: {fileID: 0}
+  WeaponPanel: {fileID: 0}
+  QuitSaveLoad: {fileID: 0}
