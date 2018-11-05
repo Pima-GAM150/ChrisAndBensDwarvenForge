@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class WeaponInventory : MonoBehaviour {
 
     public List<Weapon> weapons = new List<Weapon>(); // keeps track of all the weapons the player has crafted during the game
     public Weapon weaponPrefab; // a reference to the weapon GameObject to create copies of when crafting or loading is completed
+    const string ForgeRecipes = "ForgeRecipes.txt";
 
     public void AddWeapon( Weapon newWeapon )
     {
@@ -28,14 +30,21 @@ public class WeaponInventory : MonoBehaviour {
 
         string json = JsonUtility.ToJson( saveableInventory ); // convert the SerializableInventory object to a string (json)
 
+        string thispathtosave = System.IO.Path.Combine( Application.streamingAssetsPath, ForgeRecipes );
+
         print( "Saving " + json ); // report the data being saved for easy reference
-        PlayerPrefs.SetString( saveName, json ); // stores it in PlayerPrefs, but it could easily be stored as a text file on disk
+
+        File.WriteAllText( thispathtosave, json);
+       
+       // PlayerPrefs.SetString( saveName, json ); // stores it in PlayerPrefs, but it could easily be stored as a text file on disk
     }
 
     // this method is almost the exact reverse of the SaveAll method
     public void LoadAll( string saveName )
     {
-        string json = PlayerPrefs.GetString( saveName ); // fetches the string json that was saved under this save name
+    	string thispathtoload = System.IO.Path.Combine( Application.streamingAssetsPath, ForgeRecipes );
+    	string json = File.ReadAllText(thispathtoload);
+     // string json = PlayerPrefs.GetString( saveName ); // fetches the string json that was saved under this save name
 
         print( "Loading " + json ); // reports what it's loading for easy reference
 
