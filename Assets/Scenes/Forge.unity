@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2632,7 +2632,8 @@ Prefab:
       propertyPath: ThisManager
       value: 
       objectReference: {fileID: 1513244521}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114036659272319520, guid: b23ab3bcdd5af0e4b8b5b0711b868c38, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b23ab3bcdd5af0e4b8b5b0711b868c38, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1513244521 stripped
@@ -3227,11 +3228,49 @@ Prefab:
     - target: {fileID: 114715248571307256, guid: d34efa55c4943014e83308b490c72cf6,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
+      value: Save Game Name
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114735068768789806, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1928296680}
+    - target: {fileID: 114735068768789806, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 114715248571307256, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1928296680}
+    - target: {fileID: 114715248571307256, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735068768789806, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735068768789806, guid: d34efa55c4943014e83308b490c72cf6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Save Game Name
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114092005745138240, guid: d34efa55c4943014e83308b490c72cf6, type: 2}
+    - {fileID: 114806756370141972, guid: d34efa55c4943014e83308b490c72cf6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d34efa55c4943014e83308b490c72cf6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1928296680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114153368033094558, guid: d34efa55c4943014e83308b490c72cf6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1928296679}
+  m_Script: {fileID: 11500000, guid: 19f719d2275af8b4986cfcdf291204e4, type: 3}
 --- !u!1 &1937113808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1211056889903852, guid: d34efa55c4943014e83308b490c72cf6,

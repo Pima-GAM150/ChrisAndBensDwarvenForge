@@ -236,7 +236,6 @@ GameObject:
   - component: {fileID: 222435075719974168}
   - component: {fileID: 114927858905493620}
   - component: {fileID: 114735068768789806}
-  - component: {fileID: 114806756370141972}
   m_Layer: 0
   m_Name: Save
   m_TagString: Untagged
@@ -255,7 +254,6 @@ GameObject:
   - component: {fileID: 222086269681929122}
   - component: {fileID: 114008933122566114}
   - component: {fileID: 114715248571307256}
-  - component: {fileID: 114092005745138240}
   m_Layer: 0
   m_Name: Load
   m_TagString: Untagged
@@ -583,7 +581,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -920,20 +918,6 @@ MonoBehaviour:
   m_RestoreOriginalTextOnEscape: 1
   m_isRichTextEditingAllowed: 1
   m_InputValidator: {fileID: 0}
---- !u!114 &114092005745138240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497005272846946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f719d2275af8b4986cfcdf291204e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons: []
-  weaponPrefab: {fileID: 114418336923916592, guid: 35bac362f86bec447964b777cfa314ba,
-    type: 2}
 --- !u!114 &114096713003615476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2489,7 +2473,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114092005745138240}
+      - m_Target: {fileID: 114153368033094558}
         m_MethodName: LoadAll
         m_Mode: 5
         m_Arguments:
@@ -2497,7 +2481,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Save Game Name
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2593,15 +2577,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114806756370141972}
+      - m_Target: {fileID: 114153368033094558}
         m_MethodName: SaveAll
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Save Game Name
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2674,20 +2658,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114806756370141972
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1495050301787766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f719d2275af8b4986cfcdf291204e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons: []
-  weaponPrefab: {fileID: 114418336923916592, guid: 35bac362f86bec447964b777cfa314ba,
-    type: 2}
 --- !u!114 &114820586388052842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3272,7 +3242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -298.62, y: 36.86}
+  m_AnchoredPosition: {x: -298.62, y: 36.859985}
   m_SizeDelta: {x: -597.35, y: -73.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224052919872892640
