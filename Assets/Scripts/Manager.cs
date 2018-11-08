@@ -37,6 +37,16 @@ public class Manager : MonoBehaviour {
     public GameObject HiltIcon;
     public GameObject WeaponIcon;
 
+    public GameObject WoodBlade;
+    public GameObject MetalBlade;
+    public GameObject MithralBlade;
+    public GameObject WoodAxe;
+    public GameObject MetalAxe;
+    public GameObject MithralAxe;
+    public GameObject WoodHammer;
+    public GameObject MetalHammer;
+    public GameObject MithralHammer;
+
     public void Update(){
         if(Crafting == true){
             InventoryPanel.SetActive(true);
@@ -80,6 +90,61 @@ public class Manager : MonoBehaviour {
         else{
         	MaterialIcon.SetActive(false);
         }
+        if(WoodBladeHead == true){
+        	WoodBlade.SetActive(true);
+        }
+        else{
+        	WoodBlade.SetActive(false);
+        }
+        if(MetalBladeHead == true){
+        	MetalBlade.SetActive(true);
+        }
+        else{
+        	MetalBlade.SetActive(false);
+        }
+        if(MithralBladeHead == true){
+        	MithralBlade.SetActive(true);
+        }
+        else{
+        	MithralBlade.SetActive(false);
+        }
+        if(WoodAxeHead == true){
+        	WoodAxe.SetActive(true);
+        }
+        else{
+        	WoodAxe.SetActive(false);
+        }
+        if(MetalAxeHead == true){
+        	MetalAxe.SetActive(true);
+        }
+        else{
+        	MetalAxe.SetActive(false);
+        }
+        if(MithralAxeHead == true){
+        	MithralAxe.SetActive(true);
+        }
+        else{
+        	MithralAxe.SetActive(false);
+        }
+        if(WoodHammerHead == true){
+        	WoodHammer.SetActive(true);
+        }
+        else{
+        	WoodHammer.SetActive(false);
+        }
+        if(MetalHammerHead == true){
+        	MetalHammer.SetActive(true);
+        }
+        else{
+        	MetalHammer.SetActive(false);
+        }
+        if(MithralHammerHead == true){
+        	MithralHammer.SetActive(true);
+        }
+        else{
+        	MithralHammer.SetActive(false);
+        }
+
 
     }
 
