@@ -19,9 +19,14 @@ public class Controller : MonoBehaviour {
     // Update is called once per frame
     void Update(){
 
-    	// variables for movement and animation
+        if(ThisManager.InventoryPanel.activeSelf || ThisManager.HiltPanel.activeSelf || ThisManager.WeaponPanel.activeSelf == true){
+            buttonX = 0f;
+            buttonY = 0f;
+        }
+        else{
         buttonX = Input.GetAxis("Horizontal");
         buttonY = Input.GetAxis("Vertical");
+    }
         Player.eulerAngles = new Vector3(Xrotate, Yrotate, 0f);
         //animator for character
         animator.SetFloat("Hmove", buttonX);

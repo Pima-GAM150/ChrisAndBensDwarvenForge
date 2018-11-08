@@ -7,8 +7,6 @@ public class LoadScenePlay : MonoBehaviour {
 
 	public string LevelToLoad;
 	public Animator Transition;
-	public GameObject Button;
-	public GameObject Buttontwo;
 
 	public void loadthis(){
 
@@ -17,8 +15,6 @@ public class LoadScenePlay : MonoBehaviour {
 	}
 	IEnumerator LoadScenePlease(){
 
-		Button.SetActive(false);
-		Buttontwo.SetActive(false);
 		Transition.SetTrigger("end");
 		yield return new WaitForSeconds(1f);
 		SceneManager.LoadScene(LevelToLoad);
