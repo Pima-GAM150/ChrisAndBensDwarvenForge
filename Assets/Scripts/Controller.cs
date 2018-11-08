@@ -14,7 +14,7 @@ public class Controller : MonoBehaviour {
     private float Xrotate = 0f;
     public Manager ThisManager;
     public WeaponInventory ThisInventory;
-   // public Animator animator;
+    public Animator animator;
 
     // Update is called once per frame
     void Update(){
@@ -24,7 +24,8 @@ public class Controller : MonoBehaviour {
         buttonY = Input.GetAxis("Vertical");
         Player.eulerAngles = new Vector3(Xrotate, Yrotate, 0f);
         //animator for character
-        //animator.SetFloat("Hmove", buttonX);
+        animator.SetFloat("Hmove", buttonX);
+        animator.SetFloat("Vmove", buttonY);
 
         if (buttonX < 0f){
            Yrotate = 180f;
