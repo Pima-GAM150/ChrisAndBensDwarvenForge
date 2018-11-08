@@ -33,6 +33,9 @@ public class Manager : MonoBehaviour {
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
     public GameObject QuitSaveLoad;
+    public GameObject MaterialIcon;
+    public GameObject HiltIcon;
+    public GameObject WeaponIcon;
 
     public void Update(){
         if(Crafting == true){
@@ -59,6 +62,25 @@ public class Manager : MonoBehaviour {
         else{
         	QuitSaveLoad.SetActive(false);
         }
+        if(Hiltslot == true){
+        	HiltIcon.SetActive(true);
+        }
+        else {
+        	HiltIcon.SetActive(false);
+        }
+        if(Headslot == true){
+        	WeaponIcon.SetActive(true);
+        }
+        else {
+        	WeaponIcon.SetActive(false);
+        }
+        if(MWood || MMetal || MMithral == true){
+        	MaterialIcon.SetActive(true);
+        }
+        else{
+        	MaterialIcon.SetActive(false);
+        }
+
     }
 
     public void Clearallbools()
