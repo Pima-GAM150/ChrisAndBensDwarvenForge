@@ -11,6 +11,10 @@ public class Manager : MonoBehaviour {
 	public bool MMetal;
 	public bool MMithral;
 
+	public GameObject MWoodDisplay;
+	public GameObject MMetalDisplay;
+	public GameObject MMithralDisplay;
+
 	public bool Hilt;
 	public bool Blade;
 
@@ -93,6 +97,25 @@ public class Manager : MonoBehaviour {
         }
         else{
         	MaterialIcon.SetActive(false);
+        }
+
+        if(MWood == true){
+        	MWoodDisplay.SetActive(true);
+        }
+        else{
+        	MWoodDisplay.SetActive(false);
+        }
+        if(MMetal == true){
+        	MMetalDisplay.SetActive(true);
+        }
+        else{
+        	MMetalDisplay.SetActive(false);
+        }
+        if(MMithral == true){
+        	MMithralDisplay.SetActive(true);
+        }
+        else{
+        	MMithralDisplay.SetActive(false);
         }
 
 
