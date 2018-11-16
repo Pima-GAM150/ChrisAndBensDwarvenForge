@@ -100,11 +100,9 @@ public class Controller : MonoBehaviour {
 
         //Interacting with the Weapon table using a tag check. if true goes to Blademaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "WeaponTable"){
-            if(ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+            if(ThisManager.carryingAlloy){
                 BladeMaker();
             }
-        }
-        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
         }
 
         //interaction with Anvil if a hilt and weapon are made. 
