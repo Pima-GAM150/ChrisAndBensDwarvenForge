@@ -15,7 +15,14 @@ public class Manager : MonoBehaviour {
         set
         {
             _carryingAlloy = value;
-            MaterialIcon.alloyAppearance.sprite = _carryingAlloy.appearance;
+            if (_carryingAlloy == null)
+            {
+                MaterialIcon.alloyAppearance.sprite = null;
+            }
+            else
+            {
+                MaterialIcon.alloyAppearance.sprite = _carryingAlloy.appearance;
+            }
         }
     }
     Alloy _carryingAlloy;
