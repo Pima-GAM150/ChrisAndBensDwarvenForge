@@ -1,0 +1,1 @@
+{"weaponJsons":["{\"level\":1,\"name\":\"Wood dagger\",\"description\":\"Basic Wooden Weapon\"}"]}
