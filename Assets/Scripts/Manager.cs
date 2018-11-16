@@ -8,6 +8,17 @@ public class Manager : MonoBehaviour {
 	//whether menus are true or not. 
 	public bool Crafting;
 	public bool QuitMenu;
+
+    public Alloy carryingAlloy
+    {
+        get { return _carryingAlloy; }
+        set
+        {
+            _carryingAlloy = value;
+            MaterialIcon.alloyAppearance.sprite = _carryingAlloy.appearance;
+        }
+    }
+    Alloy _carryingAlloy;
     
     //Whether materials are true or not.
 	public bool MWood;
@@ -44,7 +55,7 @@ public class Manager : MonoBehaviour {
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
     public GameObject QuitSaveLoad;
-    public GameObject MaterialIcon;
+    public Icon MaterialIcon;
     public GameObject HiltIcon;
     public GameObject WeaponIcon;
 
@@ -107,38 +118,6 @@ public class Manager : MonoBehaviour {
         }
         else {
         	WeaponIcon.SetActive(false);
-        }
-
-        //if any material is true than material icon is turned on.
-        if(MWood || MMetal || MMithral == true){
-        	MaterialIcon.SetActive(true);
-        }
-        else{
-        	MaterialIcon.SetActive(false);
-        }
-
-        //if wood is true then wood display is turned on.
-        if(MWood == true){
-        	MWoodDisplay.SetActive(true);
-        }
-        else{
-        	MWoodDisplay.SetActive(false);
-        }
-
-        //if metal is true then metal display is turned on.
-        if(MMetal == true){
-        	MMetalDisplay.SetActive(true);
-        }
-        else{
-        	MMetalDisplay.SetActive(false);
-        }
-
-        //if mithral is true then mithral display is turned on.
-        if(MMithral == true){
-        	MMithralDisplay.SetActive(true);
-        }
-        else{
-        	MMithralDisplay.SetActive(false);
         }
 
         //if wood blade head is true then wood blade is displayed in icon box.
@@ -231,5 +210,20 @@ public class Manager : MonoBehaviour {
         MWood = false;
         MMetal = false;
         MMithral = false;
+    }
+
+    public void OpenBladeMaker()
+    {
+
+    }
+
+    public void OpenHiltMaker()
+    {
+
+    }
+
+    public void OpenPauseMenu()
+    {
+        
     }
 }

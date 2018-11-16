@@ -122,6 +122,14 @@ public class Controller : MonoBehaviour {
         }
     }
 
+    public void PickupAlloy( Alloy alloyToPickUp )
+    {
+        if (alloyToPickUp == null) print("No alloy to pick up!");
+        else print("Picking up alloy " + alloyToPickUp.name);
+
+        ThisManager.carryingAlloy = alloyToPickUp;
+    }
+
     void OnCollisionExit2D(Collision2D Interact){
 
         //Sets all crafting menus to false on exit of touching. 
