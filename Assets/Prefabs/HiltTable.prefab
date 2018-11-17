@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4706406849453476}
   - component: {fileID: 212274792136019544}
   - component: {fileID: 61202200385510696}
+  - component: {fileID: 114155005611044500}
   m_Layer: 0
   m_Name: HiltTable
   m_TagString: HiltTable
@@ -66,6 +67,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.69249034, y: 0.4627092}
   m_EdgeRadius: 0
+--- !u!114 &114155005611044500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949364306842700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccae7cda230e1a47989d7521163ccfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212274792136019544
 SpriteRenderer:
   m_ObjectHideFlags: 1

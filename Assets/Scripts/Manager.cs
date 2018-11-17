@@ -17,25 +17,35 @@ public class Manager : MonoBehaviour {
             _carryingAlloy = value;
             if (_carryingAlloy == null)
             {
-                MaterialIcon.alloyAppearance.sprite = null;
+                MaterialIcon.IconAppearance.sprite = null;
             }
             else
             {
-                MaterialIcon.alloyAppearance.sprite = _carryingAlloy.appearance;
+                MaterialIcon.IconAppearance.sprite = _carryingAlloy.appearance;
             }
         }
     }
     Alloy _carryingAlloy;
+
+    public Handle carryingHandle{
+    	get { return _carryingHandle; }
+    	set {
+    		_carryingHandle = value;
+    		if (_carryingHandle == null){
+    			HiltIcon.IconAppearance.sprite = null;
+    		}
+    		else{
+    			HiltIcon.IconAppearance.sprite = _carryingHandle.appearance;
+    		}
+
+    	}
+    }
+    Handle _carryingHandle;
     
     //Whether materials are true or not.
 	public bool MWood;
 	public bool MMetal;
 	public bool MMithral;
-
-	//Display of materials.
-	public GameObject MWoodDisplay;
-	public GameObject MMetalDisplay;
-	public GameObject MMithralDisplay;
 
 	//Whether hilt or blade are true or not.
 	public bool Hilt;
@@ -63,7 +73,7 @@ public class Manager : MonoBehaviour {
     public GameObject WeaponPanel;
     public GameObject QuitSaveLoad;
     public Icon MaterialIcon;
-    public GameObject HiltIcon;
+    public Icon HiltIcon;
     public GameObject WeaponIcon;
 
     //Display of Object for UI
@@ -88,12 +98,7 @@ public class Manager : MonoBehaviour {
         }
 
         //If hilt is true and slot is false then hilt panel is turned on or vice versa. 
-        if(Hilt == true && Hiltslot == false){
-        	HiltPanel.SetActive(true);
-        }
-        else{
-        	HiltPanel.SetActive(false);
-        }
+        
 
         //if blade is true and headslot is false then the weapon panel turns on or vice versa. 
         if( Blade == true && Headslot == false){
@@ -112,12 +117,12 @@ public class Manager : MonoBehaviour {
         }
 
         //if hiltslot is true than hilt icon is turned on or vice versa.
-        if(Hiltslot == true){
-        	HiltIcon.SetActive(true);
-        }
-        else {
-        	HiltIcon.SetActive(false);
-        }
+        //if(Hiltslot == true){
+       // 	HiltIcon.SetActive(true);
+      //  }
+      //  else {
+      //  	HiltIcon.SetActive(false);
+      //  }
 
         //if headslot is true then weapon icon is turned on or vice versa.
         if(Headslot == true){
@@ -224,10 +229,11 @@ public class Manager : MonoBehaviour {
 
     }
 
-    public void OpenHiltMaker()
-    {
-
-    }
+    public void HiltMaker(){
+    	
+        	HiltPanel.SetActive(true);
+    	
+	}
 
     public void OpenPauseMenu()
     {

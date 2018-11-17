@@ -128,6 +128,12 @@ public class Controller : MonoBehaviour {
         ThisManager.carryingAlloy = alloyToPickUp;
     }
 
+    public void OpenHiltMaker(){
+        if (ThisManager.carryingAlloy != null){
+            ThisManager.HiltMaker();
+        }
+    }
+
     void OnCollisionExit2D(Collision2D Interact){
 
         //Sets all crafting menus to false on exit of touching. 

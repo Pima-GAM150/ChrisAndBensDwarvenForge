@@ -87,7 +87,7 @@ public class HeadCrafter : MonoBehaviour {
 		//Function to create hilt with wood. 
 	public void CreateHilt(){
         ThisManager.carryingAlloy = null;
-		ThisManager.WoodHilt = true;
-		ThisManager.Hiltslot = true;
+       // ThisManager.carryingHandle != null;
+		ThisManager.HiltPanel.SetActive(false);
 	}
 }
