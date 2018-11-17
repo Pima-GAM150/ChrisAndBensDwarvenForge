@@ -5,42 +5,33 @@ using TMPro;
 
 public class CraftPanel : MonoBehaviour {
 
+    public Manager ThisManager; // Manager referanced.
+
     //Script for the Crafting panel. used to access weapon prefab and craft new weapon. 
     public WeaponInventory inventory;
     public TMP_InputField nameLabel;
     public TMP_InputField descLabel;
     public Weapon weaponPrefab;
-    public Manager ThisManager;
 
     //Craft function
-    public void Craft()
+    public void CraftWeapon()
     {
         //When called creates a weapon from the prefab and names it based on what is typed uin the name and desc then adds it. 
         Weapon newWeapon = Instantiate<Weapon>(weaponPrefab);
         newWeapon.name = nameLabel.text;
         newWeapon.description = descLabel.text;
+        newWeapon.head = ThisManager.craftedHead;
+        newWeapon.hilt = ThisManager.craftedHilt;
         inventory.AddWeapon(newWeapon);
 
-        //Resets the name and desc text back to nothing.
+        newWeapon.RegenerateAppearance();
+
+        //Resets the name and desc text back to nothing and clears the crafting inventory
         nameLabel.text = "";
         descLabel.text = "";
+        ThisManager.craftedHead = null;
+        ThisManager.craftedHilt = null;
 
-        //Sets the crafting to false and also Sets the weapons level based on what was used to make weapon. 
-        ThisManager.Crafting = false;
-        if (ThisManager.WoodBladeHead || ThisManager.WoodAxeHead || ThisManager.WoodHammerHead == true)
-        {
-            newWeapon.level = 1;
-        }
-        if (ThisManager.MetalBladeHead || ThisManager.MetalAxeHead || ThisManager.MetalHammerHead == true)
-        {
-            newWeapon.level = 3;
-        }
-        if (ThisManager.MithralBladeHead || ThisManager.MithralAxeHead || ThisManager.MithralHammerHead == true)
-        {
-            newWeapon.level = 5;
-        }
-
-        //Calls the clear all bools after weapon making and level assigning is complete. 
-        ThisManager.Clearallbools();
+        ThisManager.CloseMenus();
     }
 }

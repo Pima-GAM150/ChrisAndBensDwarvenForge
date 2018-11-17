@@ -51,26 +51,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2d2bac32b4fc54a872aae27f4bd594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Crafting: 0
-  QuitMenu: 0
-  MWood: 0
-  MMetal: 0
-  MMithral: 0
-  Hilt: 0
-  Blade: 0
-  WoodBladeHead: 0
-  MetalBladeHead: 0
-  MithralBladeHead: 0
-  WoodAxeHead: 0
-  MetalAxeHead: 0
-  MithralAxeHead: 0
-  WoodHammerHead: 0
-  MetalHammerHead: 0
-  MithralHammerHead: 0
-  WoodHilt: 0
-  Headslot: 0
-  Hiltslot: 0
+  allAlloys:
+  - {fileID: 114500456109580202, guid: 6bdfb3636bc70f04cb247f105f6db595, type: 2}
+  - {fileID: 114500456109580202, guid: 0bea9add962cb53419aaad140806f16d, type: 2}
+  - {fileID: 114500456109580202, guid: 6389b38a3eb1abc40aefdcfe95a153f4, type: 2}
+  allWeaponVarieties:
+  - {fileID: 114510235764648480, guid: bdb53a18793f14f51a48b55a17eec738, type: 2}
+  - {fileID: 114665671038363256, guid: f3fa4d4daeb614c51b7b539090a4cd3c, type: 2}
+  - {fileID: 114267883001353932, guid: f27ff30e6fd554d3088f787cf5b9a1f7, type: 2}
+  allWeaponHeads:
+  - {fileID: 114215821932635790, guid: 40ce46124e00645118406dbbd0773b37, type: 2}
+  - {fileID: 114477284033296176, guid: ec64a37bb447041739246daf6519f0b7, type: 2}
+  - {fileID: 114575108194202322, guid: 5550fd10dc9214be694cd5c36a0af44c, type: 2}
+  - {fileID: 114445865861195012, guid: 23f011789fe8749e38fe85ee9eaadfe0, type: 2}
+  - {fileID: 114285563024448498, guid: 77c1a53e64465461d99ba67897467c10, type: 2}
+  - {fileID: 114448113266405604, guid: ee00a9382b5ea46579f944c4e40a03a9, type: 2}
+  - {fileID: 114538849787703152, guid: 681707971c4ec454a99d9ba1d4c2f70c, type: 2}
+  - {fileID: 114081613594105470, guid: ba5c30a8c31ae43a88687af1efd69f0e, type: 2}
+  - {fileID: 114994813247472998, guid: 61003730bb977439b896c12e525fc4ab, type: 2}
+  allWeaponHilts:
+  - {fileID: 114586611191825220, guid: 2ce2342f874a94b079e8373b526b5dab, type: 2}
   InventoryPanel: {fileID: 0}
   HiltPanel: {fileID: 0}
   WeaponPanel: {fileID: 0}
+  CraftPanel: {fileID: 0}
   QuitSaveLoad: {fileID: 0}
+  MaterialIcon: {fileID: 0}
+  HiltIcon: {fileID: 0}
+  WeaponIcon: {fileID: 0}

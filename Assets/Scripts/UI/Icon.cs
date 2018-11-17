@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Icon : MonoBehaviour {
 
+<<<<<<< HEAD
     public SpriteRenderer IconAppearance;
+=======
+    public SpriteRenderer appearance;
+>>>>>>> CraftingAdvice
 }

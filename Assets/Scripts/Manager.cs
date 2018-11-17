@@ -3,18 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Manager : MonoBehaviour {
-	//Script to Manage the bool and control the crafting system. 
+	//Script to Manage the bool and control the crafting system.
 
-	//whether menus are true or not. 
-	public bool Crafting;
-	public bool QuitMenu;
+    // Singleton
+    public static Manager singleton;
 
+    // Prefabs of all the game data
+    public List<Alloy> allAlloys;
+    public List<Variety> allWeaponVarieties;
+    public List<WeaponComponent> allWeaponHeads;
+    public List<WeaponComponent> allWeaponHilts;
+
+    //Panels and Icons
+    public GameObject InventoryPanel;
+    public GameObject HiltPanel;
+    public GameObject WeaponPanel;
+    public GameObject CraftPanel;
+    public GameObject QuitSaveLoad;
+    public Icon MaterialIcon;
+    public Icon HiltIcon;
+    public Icon WeaponIcon;
+
+    // Properties for getting and setting things you've picked up or crafted during the game
     public Alloy carryingAlloy
     {
         get { return _carryingAlloy; }
         set
         {
             _carryingAlloy = value;
+<<<<<<< HEAD
             if (_carryingAlloy == null)
             {
                 MaterialIcon.IconAppearance.sprite = null;
@@ -130,113 +147,107 @@ public class Manager : MonoBehaviour {
         }
         else {
         	WeaponIcon.SetActive(false);
-        }
-
-        //if wood blade head is true then wood blade is displayed in icon box.
-        if(WoodBladeHead == true){
-        	WoodBlade.SetActive(true);
-        }
-        else{
-        	WoodBlade.SetActive(false);
-        }
-
-        //if metal blade head is true then metal blade is disploayed in icon box.
-        if(MetalBladeHead == true){
-        	MetalBlade.SetActive(true);
-        }
-        else{
-        	MetalBlade.SetActive(false);
-        }
-
-        //if mithral blade head is true then mithral blade is disploayed in icon box.
-        if(MithralBladeHead == true){
-        	MithralBlade.SetActive(true);
-        }
-        else{
-        	MithralBlade.SetActive(false);
-        }
-
-        //if Wood axe head is true then wood axe is disploayed in icon box.
-        if(WoodAxeHead == true){
-        	WoodAxe.SetActive(true);
-        }
-        else{
-        	WoodAxe.SetActive(false);
-        }
-
-        //if metal axe head is true then metal axe is disploayed in icon box.
-        if(MetalAxeHead == true){
-        	MetalAxe.SetActive(true);
-        }
-        else{
-        	MetalAxe.SetActive(false);
-        }
-
-        //if mithral axe head is true then mithral axe is disploayed in icon box.
-        if(MithralAxeHead == true){
-        	MithralAxe.SetActive(true);
-        }
-        else{
-        	MithralAxe.SetActive(false);
-        }
-
-        //if Wood hammer head is true then wood hammer is disploayed in icon box.
-        if(WoodHammerHead == true){
-        	WoodHammer.SetActive(true);
-        }
-        else{
-        	WoodHammer.SetActive(false);
-        }
-
-        //if metal hammer head is true then metal hammer is disploayed in icon box.
-        if(MetalHammerHead == true){
-        	MetalHammer.SetActive(true);
-        }
-        else{
-        	MetalHammer.SetActive(false);
-        }
-
-        //if mithral hammer head is true then mithral hammer is disploayed in icon box.
-        if(MithralHammerHead == true){
-        	MithralHammer.SetActive(true);
-        }
-        else{
-        	MithralHammer.SetActive(false);
+=======
+            if (_carryingAlloy == null) MaterialIcon.appearance.sprite = null;
+            else MaterialIcon.appearance.sprite = _carryingAlloy.appearance;
         }
     }
+    Alloy _carryingAlloy;
 
-    //Function to Clear all the materials, heads, and slots. 
-    public void Clearallbools()
+    public WeaponComponent craftedHead
     {
-        Headslot = false;
-        Hiltslot = false;
-        WoodBladeHead = false;
-        MetalBladeHead = false;
-        MithralBladeHead = false;
-        WoodAxeHead = false;
-        MetalAxeHead = false;
-        MithralAxeHead = false;
-        WoodHammerHead = false;
-        MetalHammerHead = false;
-        MithralHammerHead = false;
-        MWood = false;
-        MMetal = false;
-        MMithral = false;
+        get { return _craftedHead; }
+        set
+        {
+            _craftedHead = value;
+            if (_craftedHead == null) WeaponIcon.appearance.sprite = null;
+            else WeaponIcon.appearance.sprite = _craftedHead.appearance;
+>>>>>>> CraftingAdvice
+        }
     }
+    WeaponComponent _craftedHead;
 
-    public void OpenBladeMaker()
+    public WeaponComponent craftedHilt
     {
+        get { return _craftedHilt; }
+        set
+        {
+            _craftedHilt = value;
+            if (_craftedHilt == null) HiltIcon.appearance.sprite = null;
+            else HiltIcon.appearance.sprite = _craftedHilt.appearance;
+        }
+    }
+    WeaponComponent _craftedHilt;
 
+    // Singleton to make this manager easy to access
+    void Awake() {
+        singleton = this;
     }
 
+    // Fetching data by their index in a fixed array or vice-versa
+    public int IndexOfVariety( Variety variety ) { return allWeaponVarieties.IndexOf( variety ); }
+    public Variety VarietyFromIndex( int index ) { return allWeaponVarieties[index]; }
+
+    public int IndexOfAlloy( Alloy alloy ) { return allAlloys.IndexOf( alloy ); }
+    public Alloy AlloyFromIndex( int index ) { return allAlloys[index]; }
+
+    public int IndexOfWeaponHead( WeaponComponent head ) { return allWeaponHeads.IndexOf( head ); }
+    public WeaponComponent WeaponHeadFromIndex( int index ) { return allWeaponHeads[index]; }
+
+    public int IndexOfWeaponHilt( WeaponComponent hilt ) { return allWeaponHilts.IndexOf( hilt ); }
+    public WeaponComponent WeaponHiltFromIndex( int index ) { return allWeaponHilts[index]; }
+
+    // Turning on and off UI menus
+    public void ToggleInventoryPanel( bool state ) { InventoryPanel.SetActive( state ); }
+    public void ToggleWeaponPanel( bool state ) { WeaponPanel.SetActive( state ); }
+    public void ToggleCraftPanel( bool state ) { CraftPanel.SetActive( state ); }
+    public void ToggleHiltMaker( bool state ) { HiltPanel.SetActive( state ); }
+    public void TogglePauseMenu( bool state ) { QuitSaveLoad.SetActive( state ); }
+
+    public void CloseMenus() {
+        ToggleHiltMaker( false );
+        ToggleWeaponPanel( false );
+        ToggleCraftPanel( false );
+    }
+
+    // Crafting
+    public void CraftHead( Variety weaponType ) {
+        if( craftedHead == null ) {
+            craftedHead = LocateWeaponComponent( allWeaponHeads, carryingAlloy, weaponType );
+            carryingAlloy = null;
+            CloseMenus();
+        }
+    }
+
+    public void CraftHilt() {
+        if( craftedHilt == null ) {
+            craftedHilt = LocateWeaponComponent( allWeaponHilts, carryingAlloy, null );
+            carryingAlloy = null;
+            CloseMenus();
+        }
+    }
+
+    // Finding the right WeaponComponent from a given list by alloy and variety
+    WeaponComponent LocateWeaponComponent( List<WeaponComponent> listToSearch, Alloy alloyToMatch, Variety weaponType ) {
+        foreach( WeaponComponent candidate in listToSearch ) {
+
+<<<<<<< HEAD
     public void HiltMaker(){
     	
     	HiltPanel.SetActive(true);
     	
 	}
+=======
+            // if the component in the list either matches with the alloy and variety we're searching for, or if the alloy / variety is null (i.e. "any"), then it qualifies
+            if( candidate.alloy == alloyToMatch && candidate.variety == weaponType ) {
+                return candidate;
+            }
+        }
 
-    public void OpenPauseMenu()
-    {
-        
+        return null;
     }
+>>>>>>> CraftingAdvice
+
+    // convenience property
+    public bool anyMenuOpen { get { return InventoryPanel.activeSelf || HiltPanel.activeSelf || WeaponPanel.activeSelf; }}
 }
