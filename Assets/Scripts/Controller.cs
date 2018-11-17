@@ -28,7 +28,7 @@ public class Controller : MonoBehaviour {
     void Update(){
 
         //Stops the players movement when inside of a panel for crafting. 
-        if(ThisManager.InventoryPanel.activeSelf || ThisManager.HiltPanel.activeSelf || ThisManager.WeaponPanel.activeSelf == true){
+        if(ThisManager.anyMenuOpen){
             buttonX = 0f;
             buttonY = 0f;
         }
@@ -54,9 +54,7 @@ public class Controller : MonoBehaviour {
         }
 
         //Escape button to open a new panel to exit, or to simply save. 
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            OpenMenu();
-    }
+        if(Input.GetKeyDown(KeyCode.Escape)) ThisManager.TogglePauseMenu( true );
 }
 
     void FixedUpdate(){
@@ -68,90 +66,39 @@ public class Controller : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D Interact){
 
-        //Picking up a wood material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Wood" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MWood = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
-
-        //Picking up a Metal material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Metal" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MMetal = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
-
-        //Picking up a Mithral material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Mithral" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MMithral = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
-
         //Interacting with the hilt table using tag check. if true goes to hiltmaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "HiltTable"){
-            if(ThisManager.MWood == true){
-                HiltMaker();
+            if( ThisManager.carryingAlloy && ThisManager.carryingAlloy.name == "Wood" ){
+                ThisManager.ToggleHiltMaker( true );
             }
-        }
-        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
         }
 
         //Interacting with the Weapon table using a tag check. if true goes to Blademaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "WeaponTable"){
             if(ThisManager.carryingAlloy){
-                BladeMaker();
+                ThisManager.ToggleWeaponPanel( true );
             }
         }
 
         //interaction with Anvil if a hilt and weapon are made. 
         if(Interact.gameObject.tag == "Anvil")
         {
-            if(ThisManager.Headslot && ThisManager.Hiltslot == true)
+            if(ThisManager.craftedHead && ThisManager.craftedHilt)
             {
-                ThisManager.Crafting = true;
+                ThisManager.ToggleCraftPanel( true );
             }
         }
 
         //Trash check. goes to clearallbools function. 
         if(Interact.gameObject.tag == "Trash"){
-            ThisManager.Clearallbools();
+            ThisManager.carryingAlloy = null;
+            ThisManager.craftedHead = null;
+            ThisManager.craftedHilt = null;
         }
     }
 
     public void PickupAlloy( Alloy alloyToPickUp )
     {
-        if (alloyToPickUp == null) print("No alloy to pick up!");
-        else print("Picking up alloy " + alloyToPickUp.name);
-
         ThisManager.carryingAlloy = alloyToPickUp;
-    }
-
-    void OnCollisionExit2D(Collision2D Interact){
-
-        //Sets all crafting menus to false on exit of touching. 
-        ThisManager.Hilt = false;
-        ThisManager.Blade = false;
-        ThisManager.Crafting = false;
-    }
-
-    //Hilt maker function for when you touch the hilt table. 
-    public void HiltMaker(){
-        ThisManager.Hilt = true;
-    }
-
-    //Blade maker function for when touching the weapon table. 
-    public void BladeMaker(){
-        ThisManager.Blade = true;
-    }
-
-    //Open menu function, starts coroutine with IEnumerator menu delay to wait .1f seconds. toggles quitmenu.  
-    public void OpenMenu(){
-        StartCoroutine(MenuDelay());
-        }
-    IEnumerator MenuDelay(){
-        yield return new WaitForSeconds(.1f);
-        ThisManager.QuitMenu = !ThisManager.QuitMenu;   
     }
 }
