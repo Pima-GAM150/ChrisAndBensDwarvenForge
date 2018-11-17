@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212583185366652904}
   - component: {fileID: 61568849590962118}
   m_Layer: 0
-  m_Name: Metal
+  m_Name: MetalBucket
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

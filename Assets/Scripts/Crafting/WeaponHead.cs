@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class WeaponHead : MonoBehaviour {
 
-	public enum HeadType { WoodAxe, MetalAxe, MithralAxe, WoodHammer, MetalHammer, MithralHammer, WoodBlade, MetalBlade, MithralBlade }
+	public enum HeadType {None, WoodAxe, MetalAxe, MithralAxe, WoodHammer, MetalHammer, MithralHammer, WoodBlade, MetalBlade, MithralBlade }
 
 	public HeadType headType;
 
-	
+	public SpriteRenderer NewAppearance;
+
+	public Sprite[] Appearance;
 
 }

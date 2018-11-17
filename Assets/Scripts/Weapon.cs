@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
 
     public int level;
     public string description;
+    
 
     // the weapon should know how to save itself to json, so whoever wants to save it can just get a saveable version of its data
     public string Save()

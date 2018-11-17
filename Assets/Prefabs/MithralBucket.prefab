@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212962529525380878}
   - component: {fileID: 61535300862615078}
   m_Layer: 0
-  m_Name: Mithral
+  m_Name: MithralBucket
   m_TagString: Mithral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
