@@ -69,34 +69,34 @@ public class Controller : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D Interact){
 
         //Picking up a wood material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Wood" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MWood = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
+       // if (Interact.gameObject.tag == "Wood" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+       //     ThisManager.MWood = true;
+       // }
+       // else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+       // }
 
         //Picking up a Metal material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Metal" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MMetal = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
+       // if (Interact.gameObject.tag == "Metal" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+        //    ThisManager.MMetal = true;
+       // }
+       // else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+      //  }
 
         //Picking up a Mithral material if no other materials are picked up. 
-        if (Interact.gameObject.tag == "Mithral" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-            ThisManager.MMithral = true;
-        }
-        else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
-        }
+        //if (Interact.gameObject.tag == "Mithral" && ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+        //    ThisManager.MMithral = true;
+      //  }
+      //  else if (ThisManager.MWood == true || ThisManager.MMetal == true || ThisManager.MMithral == true){
+      //  }
 
         //Interacting with the hilt table using tag check. if true goes to hiltmaker function. if materials are false does nothing.
-        if (Interact.gameObject.tag == "HiltTable"){
-            if(ThisManager.MWood == true){
-                HiltMaker();
-            }
-        }
-        else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
-        }
+      //  if (Interact.gameObject.tag == "HiltTable"){
+          //  if(ThisManager.MWood == true){
+          //      HiltMaker();
+        //    }
+       // }
+      //  else if (ThisManager.MWood == false && ThisManager.MMetal == false && ThisManager.MMithral == false){
+       // }
 
         //Interacting with the Weapon table using a tag check. if true goes to Blademaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "WeaponTable"){
@@ -143,9 +143,9 @@ public class Controller : MonoBehaviour {
     }
 
     //Hilt maker function for when you touch the hilt table. 
-    public void HiltMaker(){
-        ThisManager.Hilt = true;
-    }
+  //  public void HiltMaker(){
+    //    ThisManager.Hilt = true;
+  //  }
 
     //Blade maker function for when touching the weapon table. 
     public void BladeMaker(){

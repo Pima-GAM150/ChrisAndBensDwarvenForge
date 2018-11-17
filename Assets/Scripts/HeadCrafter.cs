@@ -6,6 +6,7 @@ public class HeadCrafter : MonoBehaviour {
 	//Script is for creating the weapon heads and hilt. 
 
 	public Manager ThisManager; // Manager referanced.
+	public Handle HandleMade;
 
 	//function to create an axe head depending on the material. 
 	public void CreateAxeHead(){
@@ -87,7 +88,7 @@ public class HeadCrafter : MonoBehaviour {
 		//Function to create hilt with wood. 
 	public void CreateHilt(){
         ThisManager.carryingAlloy = null;
-       // ThisManager.carryingHandle != null;
+        ThisManager.carryingHandle = HandleMade;
 		ThisManager.HiltPanel.SetActive(false);
 	}
 }

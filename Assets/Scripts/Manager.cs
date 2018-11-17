@@ -231,7 +231,7 @@ public class Manager : MonoBehaviour {
 
     public void HiltMaker(){
     	
-        	HiltPanel.SetActive(true);
+    	HiltPanel.SetActive(true);
     	
 	}
 

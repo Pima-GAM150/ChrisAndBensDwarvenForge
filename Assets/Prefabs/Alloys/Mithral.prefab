@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alloyType: 2
-  level: 0
-  value: 0
+  level: 5
+  value: 5
   appearance: {fileID: 21300000, guid: 8835a9f1ef413814dacf5224ec4e2ee9, type: 3}
