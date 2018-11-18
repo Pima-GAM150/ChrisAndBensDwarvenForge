@@ -99,6 +99,9 @@ public class Manager : MonoBehaviour {
             carryingAlloy = null;
             CloseMenus();
         }
+        else{
+        	CloseMenus();
+        }
     }
 
     public void CraftHilt() {
@@ -106,6 +109,9 @@ public class Manager : MonoBehaviour {
             craftedHilt = LocateWeaponComponent( allWeaponHilts, carryingAlloy, null );
             carryingAlloy = null;
             CloseMenus();
+        }
+        else{
+        	CloseMenus();
         }
     }
 

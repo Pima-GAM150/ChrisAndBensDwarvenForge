@@ -53,4 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alloy: {fileID: 114500456109580202, guid: 6bdfb3636bc70f04cb247f105f6db595, type: 2}
   variety: {fileID: 114510235764648480, guid: bdb53a18793f14f51a48b55a17eec738, type: 2}
-  appearance: {fileID: 21300000, guid: d3733f730b8b74b41834cacaa8cbfa11, type: 3}
+  appearance: {fileID: 21300000, guid: d457d5cc4c4b17c429b9eeba700ed570, type: 3}
+  level: 0

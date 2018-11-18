@@ -1,1 +1,1 @@
-{"weaponJsons":["{\"level\":0,\"headIndex\":4,\"hiltIndex\":0,\"name\":\"Mithral Sword\",\"description\":\"Impressive!\"}"]}
+{"weaponJsons":["{\"level\":0,\"headIndex\":0,\"hiltIndex\":0,\"name\":\"Basic Blade\",\"description\":\"Not a basic Bitch let me tell you that!\"}"]}
