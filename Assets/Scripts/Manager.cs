@@ -5,6 +5,8 @@ using UnityEngine;
 public class Manager : MonoBehaviour {
 	//Script to Manage the bool and control the crafting system.
 
+	public AudioSource ButtonClick;
+
     // Singleton
     public static Manager singleton;
 
@@ -87,6 +89,7 @@ public class Manager : MonoBehaviour {
     public void TogglePauseMenu( bool state ) { QuitSaveLoad.SetActive( state ); }
 
     public void CloseMenus() {
+    	ButtonClick.Play(0);
         ToggleHiltMaker( false );
         ToggleWeaponPanel( false );
         ToggleCraftPanel( false );
