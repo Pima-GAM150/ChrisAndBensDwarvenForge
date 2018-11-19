@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour {
     public Transform Player;
     public BoxCollider2D Mycollidor;
     public Rigidbody2D RigidBodyChar;
+    public AudioSource SmithSound;
 
     //floats for buttons and rotations as well as movement speed. 
     public float speed;
@@ -69,6 +70,8 @@ public class Controller : MonoBehaviour {
         //Interacting with the hilt table using tag check. if true goes to hiltmaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "HiltTable"){
             if( ThisManager.carryingAlloy && ThisManager.carryingAlloy.name == "Wood" ){
+
+                animator.SetBool("SmithingTime",true);
                 ThisManager.ToggleHiltMaker( true );
             }
         }
@@ -76,6 +79,7 @@ public class Controller : MonoBehaviour {
         //Interacting with the Weapon table using a tag check. if true goes to Blademaker function. if materials are false does nothing.
         if (Interact.gameObject.tag == "WeaponTable"){
             if(ThisManager.carryingAlloy){
+                animator.SetBool("SmithingTime",true);
                 ThisManager.ToggleWeaponPanel( true );
             }
         }
@@ -85,6 +89,8 @@ public class Controller : MonoBehaviour {
         {
             if(ThisManager.craftedHead && ThisManager.craftedHilt)
             {
+
+                animator.SetBool("SmithingTime",true);
                 ThisManager.ToggleCraftPanel( true );
             }
         }
@@ -100,5 +106,9 @@ public class Controller : MonoBehaviour {
     public void PickupAlloy( Alloy alloyToPickUp )
     {
         ThisManager.carryingAlloy = alloyToPickUp;
+    }
+
+    public void PlaySmithSound(){
+        SmithSound.Play(0);
     }
 }

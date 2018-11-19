@@ -6,6 +6,7 @@ public class Manager : MonoBehaviour {
 	//Script to Manage the bool and control the crafting system.
 
 	public AudioSource ButtonClick;
+	public Animator animator;
 
     // Singleton
     public static Manager singleton;
@@ -90,6 +91,7 @@ public class Manager : MonoBehaviour {
 
     public void CloseMenus() {
     	ButtonClick.Play(0);
+    	animator.SetBool("SmithingTime",false);
         ToggleHiltMaker( false );
         ToggleWeaponPanel( false );
         ToggleCraftPanel( false );
