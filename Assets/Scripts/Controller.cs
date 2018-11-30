@@ -101,6 +101,12 @@ public class Controller : MonoBehaviour {
             ThisManager.craftedHead = null;
             ThisManager.craftedHilt = null;
         }
+
+        //interaction with Anvil if a hilt and weapon are made. 
+        if (Interact.gameObject.tag == "Shop")
+        {
+            Manager.singleton.sellPanel.gameObject.SetActive(true);
+        }
     }
 
     public void PickupAlloy( Alloy alloyToPickUp )

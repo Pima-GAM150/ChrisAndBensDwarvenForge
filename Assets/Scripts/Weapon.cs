@@ -41,6 +41,9 @@ public class Weapon : MonoBehaviour {
         this.head = Manager.singleton.WeaponHeadFromIndex( weaponData.headIndex );
         this.hilt = Manager.singleton.WeaponHiltFromIndex( weaponData.hiltIndex );
 
+        transform.position = Manager.singleton.craftPanel.WeaponPile.transform.position;
+        transform.Rotate(0f, 0f, Random.Range(0f, 360f));
+
         RegenerateAppearance();
     }
 

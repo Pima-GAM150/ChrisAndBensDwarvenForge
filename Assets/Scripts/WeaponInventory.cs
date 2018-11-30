@@ -18,6 +18,12 @@ public class WeaponInventory : MonoBehaviour {
         weapons.Add(newWeapon); // adds a weapon to the list we keep of crafted weapons
     }
 
+    public void RemoveWeapon( Weapon weaponToRemove )
+    {
+        weapons.Remove(weaponToRemove);
+        Destroy(weaponToRemove.gameObject);
+    }
+
     // method that takes a "save slot" name and saves data by that name
     public void SaveAll( string saveName ) {
         List<string> saveData = new List<string>(); // a list to hold the weapon data converted into the form of strings (json) 

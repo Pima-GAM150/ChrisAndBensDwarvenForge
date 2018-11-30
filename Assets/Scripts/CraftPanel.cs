@@ -6,6 +6,7 @@ using TMPro;
 public class CraftPanel : MonoBehaviour {
 
     public Manager ThisManager; // Manager referanced.
+    public Transform WeaponPile;
 
     //Script for the Crafting panel. used to access weapon prefab and craft new weapon. 
     public WeaponInventory inventory;
@@ -22,8 +23,10 @@ public class CraftPanel : MonoBehaviour {
         newWeapon.description = descLabel.text;
         newWeapon.head = ThisManager.craftedHead;
         newWeapon.hilt = ThisManager.craftedHilt;
+        newWeapon.level = ThisManager.craftedHead.level + ThisManager.craftedHilt.level;
         inventory.AddWeapon(newWeapon);
-
+        newWeapon.transform.position = WeaponPile.position;
+        newWeapon.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
         newWeapon.RegenerateAppearance();
 
         //Resets the name and desc text back to nothing and clears the crafting inventory

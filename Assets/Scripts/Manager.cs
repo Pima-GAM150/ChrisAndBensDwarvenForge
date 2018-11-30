@@ -21,7 +21,8 @@ public class Manager : MonoBehaviour {
     public GameObject InventoryPanel;
     public GameObject HiltPanel;
     public GameObject WeaponPanel;
-    public GameObject CraftPanel;
+    public CraftPanel craftPanel;
+    public SellPanel sellPanel;
     public GameObject QuitSaveLoad;
     public Icon MaterialIcon;
     public Icon HiltIcon;
@@ -85,7 +86,7 @@ public class Manager : MonoBehaviour {
     // Turning on and off UI menus
     public void ToggleInventoryPanel( bool state ) { InventoryPanel.SetActive( state ); }
     public void ToggleWeaponPanel( bool state ) { WeaponPanel.SetActive( state ); }
-    public void ToggleCraftPanel( bool state ) { CraftPanel.SetActive( state ); }
+    public void ToggleCraftPanel( bool state ) { craftPanel.gameObject.SetActive( state ); }
     public void ToggleHiltMaker( bool state ) { HiltPanel.SetActive( state ); }
     public void TogglePauseMenu( bool state ) { QuitSaveLoad.SetActive( state ); }
 
