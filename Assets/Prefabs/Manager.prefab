@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonClick: {fileID: 0}
+  animator: {fileID: 0}
   allAlloys:
   - {fileID: 114500456109580202, guid: 6389b38a3eb1abc40aefdcfe95a153f4, type: 2}
   - {fileID: 114500456109580202, guid: 6bdfb3636bc70f04cb247f105f6db595, type: 2}

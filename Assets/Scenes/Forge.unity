@@ -8323,6 +8323,11 @@ Prefab:
       objectReference: {fileID: 480934928}
     - target: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
         type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1394500820}
+    - target: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
+        type: 2}
       propertyPath: InventoryPanel
       value: 
       objectReference: {fileID: 1937113808}
@@ -8361,16 +8366,6 @@ Prefab:
       propertyPath: WeaponIcon
       value: 
       objectReference: {fileID: 727814454}
-    - target: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1394500820}
-    - target: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
-        type: 2}
-      propertyPath: SmithSound
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ab476cee74a204ca9d19b71a25bb05, type: 2}
   m_IsPrefabAsset: 0
