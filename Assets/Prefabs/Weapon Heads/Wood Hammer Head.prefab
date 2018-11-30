@@ -54,3 +54,4 @@ MonoBehaviour:
   alloy: {fileID: 114500456109580202, guid: 6389b38a3eb1abc40aefdcfe95a153f4, type: 2}
   variety: {fileID: 114267883001353932, guid: f27ff30e6fd554d3088f787cf5b9a1f7, type: 2}
   appearance: {fileID: 21300000, guid: 25e07470564ba2a4b9adedf742cf4cc6, type: 3}
+  level: 1
