@@ -135,5 +135,5 @@ public class Manager : MonoBehaviour {
     }
 
     // convenience property
-    public bool anyMenuOpen { get { return InventoryPanel.activeSelf || HiltPanel.activeSelf || WeaponPanel.activeSelf; }}
+    public bool anyMenuOpen { get { return InventoryPanel.activeSelf || HiltPanel.activeSelf || WeaponPanel.activeSelf || QuitSaveLoad.activeSelf; }}
 }
