@@ -18,6 +18,8 @@ public class Controller : MonoBehaviour {
     private float Yrotate = 0f;
     private float Xrotate = 0f;
 
+    private bool escapebool = false;
+
     //Manager variable to access the manager in the scene.
     public Manager ThisManager;
     public WeaponInventory ThisInventory;
@@ -55,7 +57,14 @@ public class Controller : MonoBehaviour {
         }
 
         //Escape button to open a new panel to exit, or to simply save. 
-        if(Input.GetKeyDown(KeyCode.Escape)) ThisManager.TogglePauseMenu( true );
+        if(Input.GetKeyDown(KeyCode.Escape) && escapebool == false) {
+            escapebool = true;
+            ThisManager.TogglePauseMenu( escapebool );
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && escapebool == true){
+            escapebool = false;
+            ThisManager.TogglePauseMenu( escapebool );
+        }
 }
 
     void FixedUpdate(){
