@@ -122,8 +122,10 @@ MonoBehaviour:
   Player: {fileID: 4993485034390932}
   Mycollidor: {fileID: 61769471305750308}
   RigidBodyChar: {fileID: 50141374175576428}
+  SmithSound: {fileID: 0}
   speed: 3
-  ThisManager: {fileID: 0}
+  ThisManager: {fileID: 114089853518319178, guid: b7ab476cee74a204ca9d19b71a25bb05,
+    type: 2}
   ThisInventory: {fileID: 0}
   animator: {fileID: 95344061435015220}
 --- !u!114 &114795889643887220
@@ -174,7 +176,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39d44c6907f2b2d4b8bab4ad9cd7e171, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
