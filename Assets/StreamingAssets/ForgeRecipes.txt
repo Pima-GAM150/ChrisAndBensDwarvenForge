@@ -1,1 +1,1 @@
-{"weaponJsons":["{\"level\":3,\"name\":\"jh\",\"description\":\"gh\"}","{\"level\":3,\"name\":\"Mjolnir\",\"description\":\"tis a hammer\"}"]}
+{"weaponJsons":[]}

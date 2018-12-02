@@ -9,9 +9,19 @@ public class WeaponInventory : MonoBehaviour {
     public Weapon weaponPrefab; // a reference to the weapon GameObject to create copies of when crafting or loading is completed
     const string ForgeRecipes = "ForgeRecipes.txt";
 
+    public void Start(){
+    	LoadAll("Save Game Name");
+    }
+
     public void AddWeapon( Weapon newWeapon )
     {
         weapons.Add(newWeapon); // adds a weapon to the list we keep of crafted weapons
+    }
+
+    public void RemoveWeapon( Weapon weaponToRemove )
+    {
+        weapons.Remove(weaponToRemove);
+        Destroy(weaponToRemove.gameObject);
     }
 
     // method that takes a "save slot" name and saves data by that name

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public int level;
-    public string description;
+    public WeaponComponent hilt { get; set; }
+    public WeaponComponent head { get; set; }
+    public int level { get; set; }
+    public string description { get; set; }
+
+    public SpriteRenderer headRenderer;
+    public SpriteRenderer hiltRenderer;
 
     // the weapon should know how to save itself to json, so whoever wants to save it can just get a saveable version of its data
     public string Save()
@@ -16,7 +21,9 @@ public class Weapon : MonoBehaviour {
         {
             level = this.level,
             name = this.name,
-            description = this.description
+            description = this.description,
+            headIndex = Manager.singleton.IndexOfWeaponHead( head ),
+            hiltIndex = Manager.singleton.IndexOfWeaponHilt( hilt )
         };
         string json = JsonUtility.ToJson( weaponData ); // convert it to json
         return json; // return the saveable data to whoever wants it
@@ -31,8 +38,18 @@ public class Weapon : MonoBehaviour {
         this.level = weaponData.level;
         this.description = weaponData.description;
         this.name = weaponData.name;
+        this.head = Manager.singleton.WeaponHeadFromIndex( weaponData.headIndex );
+        this.hilt = Manager.singleton.WeaponHiltFromIndex( weaponData.hiltIndex );
 
+        transform.position = Manager.singleton.craftPanel.WeaponPile.transform.position;
+        transform.Rotate(0f, 0f, Random.Range(0f, 360f));
 
+        RegenerateAppearance();
+    }
+
+    public void RegenerateAppearance() {
+        headRenderer.sprite = head.appearance;
+        hiltRenderer.sprite = hilt.appearance;
     }
 }
 
@@ -40,6 +57,8 @@ public class Weapon : MonoBehaviour {
 public class SerializableWeapon
 {
     public int level;
+    public int headIndex;
+    public int hiltIndex;
     public string name;
     public string description;
 }
