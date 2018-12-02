@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 	//Script to Manage the bool and control the crafting system.
@@ -25,6 +26,7 @@ public class Manager : MonoBehaviour {
     public CraftPanel craftPanel;
     public SellPanel sellPanel;
     public GameObject QuitSaveLoad;
+    public Text GoldDisplay;
     public Icon MaterialIcon;
     public Icon HiltIcon;
     public Icon WeaponIcon;
@@ -69,6 +71,10 @@ public class Manager : MonoBehaviour {
     // Singleton to make this manager easy to access
     void Awake() {
         singleton = this;
+    }
+
+    public void Update(){
+    	GoldDisplay.text = TotalGold.ToString();
     }
 
     // Fetching data by their index in a fixed array or vice-versa
