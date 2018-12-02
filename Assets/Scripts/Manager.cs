@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour {
 
 	public AudioSource ButtonClick;
 	public Animator animator;
+	public int TotalGold;
 
     // Singleton
     public static Manager singleton;

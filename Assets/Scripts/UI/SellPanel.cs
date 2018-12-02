@@ -17,6 +17,8 @@ public class SellPanel : MonoBehaviour {
 
     public void Sell( Weapon weapon )
     {
+
+        Manager.singleton.TotalGold += weapon.level;
         Manager.singleton.craftPanel.inventory.RemoveWeapon(weapon);
 
         Refresh();
