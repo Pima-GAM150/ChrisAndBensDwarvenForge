@@ -35,7 +35,8 @@ public class WeaponInventory : MonoBehaviour {
         // create a data object that holds an array of jsons (one for each weapon).  In this form, the list can itself be converted to json.
         SerializableInventory saveableInventory = new SerializableInventory
         {
-            weaponJsons = saveData.ToArray()
+            weaponJsons = saveData.ToArray(),
+            gold = Manager.singleton.TotalGold
         };
 
         string json = JsonUtility.ToJson( saveableInventory ); // convert the SerializableInventory object to a string (json)
@@ -67,10 +68,13 @@ public class WeaponInventory : MonoBehaviour {
             newWeapon.Load(loadedInventory.weaponJsons[index]);
             AddWeapon( newWeapon ); // add the instantiated and loaded weapon back into the crafted list
         }
+
+        Manager.singleton.TotalGold = loadedInventory.gold;
     }
 }
 
 public class SerializableInventory
 {
+    public int gold;
     public string[] weaponJsons;
 }
