@@ -169,9 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bc6dd6e64b0ef478b463e6b785c955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SmithSound: {fileID: 82596306679732732, guid: 26f55243e4685c240bbf9df7aa2350e1,
+  SmithSound: {fileID: 82355700166760706, guid: d47b02dde7c64fd4dba192e9c6ae027e,
     type: 2}
-  StepSound: {fileID: 0}
+  StepSound: {fileID: 82021305045023250, guid: c9247bca0969ab44ea22e562d2c65408, type: 2}
 --- !u!114 &114795889643887220
 MonoBehaviour:
   m_ObjectHideFlags: 1
