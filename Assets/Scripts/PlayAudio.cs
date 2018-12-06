@@ -13,6 +13,5 @@ public class PlayAudio : MonoBehaviour {
 
 	public void PlayStepSound(){
 		StepSound.Play(0);
-		print("Yo");
 	}
 }
